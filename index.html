@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just Fucking Use a Monolith</title>
+    <meta name="description"
+        content="Stop over-engineering your architecture. You don't need microservices. You need a monolith.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 class="main-title">Just Fucking Use a Monolith</h1>
+            <p class="subtitle">Stop pretending you're Netflix</p>
+        </header>
+
+        <main>
+            <section class="intro">
+                <p>You probably think you need microservices. You're over here drawing service boundaries for an app
+                    that doesn't exist yet. You're considering Kubernetes because some tech bro said "it scales." You're
+                    splitting your codebase into 47 repositories because you read about Conway's Law once. Well guess
+                    what, dipshit:</p>
+            </section>
+
+            <section class="answer">
+                <h2>You just need a monolith.</h2>
+                <p>That's it. That's the fucking answer. Stop Googling "microservices vs monolith" for the 73rd time.
+                    Stop asking on Reddit if you should use event-driven architecture. Stop pretending you have
+                    Amazon-scale problems when you have 8 users.</p>
+            </section>
+
+            <section class="reasons">
+                <h3>Here's why, motherfucker:</h3>
+                <ul>
+                    <li>It's simple and you can actually understand it</li>
+                    <li>Deployment is one command, not a fucking orchestration nightmare</li>
+                    <li>Debugging doesn't require distributed tracing tools</li>
+                    <li>Transactions actually work without distributed sagas</li>
+                    <li>Refactoring is find-and-replace, not a 6-month migration</li>
+                    <li>You can run it on your laptop, you don't need a cluster</li>
+                </ul>
+            </section>
+
+            <section class="objection">
+                <h2>"But I need to scale!"</h2>
+                <p>No you fucking don't. You know what scales? A well-written monolith. You know what doesn't? Your
+                    distributed system with network calls everywhere and eventual consistency bugs you can't reproduce.
+                    Shopify runs on a monolith. GitHub runs on a monolith. Stack Overflow runs on a monolith. But sure,
+                    your SaaS with 12 paying customers needs to be split into 20 microservices.</p>
+            </section>
+
+            <section class="objection">
+                <h2>"But microservices are more flexible!"</h2>
+                <p>Flexible is just another word for "I want to make simple things complicated." You know what's
+                    actually flexible? A modular monolith with clear boundaries. You can refactor it. You can test it.
+                    You can deploy it without coordinating 15 different services. Microservices give you the flexibility
+                    to fail in way more complicated, expensive, and fucking creative ways.</p>
+            </section>
+
+            <section class="objection">
+                <h2>"But we need independent deployments!"</h2>
+                <p>Why? So you can deploy your authentication service and break your entire platform because you forgot
+                    about that one API contract? So you can spend 3 days debugging why the checkout flow is broken
+                    because the payment service version doesn't match the order service? Deploying a monolith takes 30
+                    seconds. Your microservices deployment pipeline takes 45 minutes and fails half the time.</p>
+            </section>
+
+            <section class="objection">
+                <h2>"But different teams need different services!"</h2>
+                <p>You have 4 developers. You don't have "teams." You have Bob, Sarah, and two juniors. They can all
+                    work in the same fucking codebase. Use modules. Use packages. Use folders. You know what kills
+                    productivity? Waiting for another "team" to update their API so you can finish your feature.</p>
+            </section>
+
+            <section class="objection">
+                <h2>"But my startup is about to hit a million in ARR!"</h2>
+                <p>Do not build for the projected scale of your startup. That scale only exists in the fucking pitch
+                    deck you made at 2 AM. You're optimizing for 10 million users when you have 47. You're planning for Black
+                    Friday traffic when you haven't made your first sale. You know what doesn't scale? Your engineering
+                    team debugging distributed transactions at 3 AM because you prematurely optimized for problems you
+                    don't have.</p>
+            </section>
+
+            <section class="what-it-does">
+                <h2>What a Monolith Actually Does</h2>
+                <ul class="feature-list">
+                    <li><strong>Simple deployment:</strong> One artifact, one deploy, one rollback. <span
+                            class="cta">Just fucking deploy it.</span></li>
+                    <li><strong>Real transactions:</strong> ACID across your entire domain. No distributed sagas. <span
+                            class="cta">Just fucking use transactions.</span></li>
+                    <li><strong>Easy debugging:</strong> Stack traces that make sense. Logs in one place. <span
+                            class="cta">Just fucking use a debugger.</span></li>
+                    <li><strong>Fast development:</strong> Change code, see results. No service mesh. <span
+                            class="cta">Just fucking iterate.</span></li>
+                    <li><strong>Actual performance:</strong> In-process calls are faster than network calls. <span
+                            class="cta">Just fucking use function calls.</span></li>
+                    <li><strong>Simple monitoring:</strong> One app, one dashboard, one alert. <span class="cta">Just
+                            fucking use APM.</span></li>
+                    <!-- <li><strong>Refactoring that works:</strong> IDE refactoring actually works across your codebase.
+                        <span class="cta">Just fucking rename things.</span>
+                    </li> -->
+                    <li><strong>Testable code:</strong> Integration tests that don't need Docker Compose. <span
+                            class="cta">Just fucking write tests.</span></li>
+                    <li><strong>Shared code:</strong> No copying utilities across 15 repos. <span class="cta">Just
+                            fucking import it.</span></li>
+                    <!-- <li><strong>One language:</strong> You don't need polyglot persistence. <span class="cta">Just
+                            fucking pick one stack.</span></li> -->
+                    <li><strong>Vertical scaling:</strong> Servers are cheap. Complexity is expensive. <span
+                            class="cta">Just fucking add RAM.</span></li>
+                    <!-- <li><strong>Modular design:</strong> You can still have clean architecture. <span class="cta">Just
+                            fucking use modules.</span></li> -->
+                </ul>
+            </section>
+
+            <section class="stop-overengineering">
+                <h2>Stop Over-Engineering Your Shit</h2>
+                <p>You don't need a service mesh, an API gateway, a message queue, a service registry, distributed
+                    tracing, circuit breakers, and a fucking PhD in distributed systems to build a CRUD app. You need
+                    one codebase, one database, one deployment. That's it.</p>
+                <p>Use a monolith. Learn to write modular code. Stop cargo-culting architecture choices from companies
+                    with 10,000 engineers. Your startup with 3 developers and a Figma file doesn't need the same
+                    architecture as Uber.</p>
+            </section>
+
+            <section class="reality-check">
+                <h2>Yes, This is Satire (Kind Of)</h2>
+                <p>Look, there ARE legitimate use cases for microservices. If you have 500 engineers and need
+                    independent team autonomy, maybe microservices make sense. If you have genuinely different scaling
+                    requirements for different parts of your system, maybe you need to split things up. If you're
+                    Google, you probably know what you're doing.</p>
+                <p>But for 95% of applications, a monolith is the right choice. It's the sensible default. Start with a
+                    monolith. Keep it modular. Only split it when you have a SPECIFIC, MEASURED reason to do so. Not
+                    because it's trendy. Not because you went to a conference. Because you actually have problems that
+                    microservices solve.</p>
+                <p class="final-word">Until then: <strong>Just. Fucking. Use. A. Monolith.</strong></p>
+            </section>
+
+            <footer>
+                <p>Inspired by <a href="https://www.justfuckingusepostgres.com" target="_blank" rel="noopener">Just
+                        Fucking Use Postgres</a></p>
+                <p class="love">Made with ❤️ and frustration with over-engineering</p>
+            </footer>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
