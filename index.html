@@ -4,9 +4,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Just Fucking Use a Monolith</title>
+    <meta name="title" content="Just Fucking Use a Monolith">
     <meta name="description"
-        content="Stop over-engineering your architecture. You don't need microservices. You need a monolith.">
+        content="Stop over-engineering your architecture. You don't need microservices. You need a monolith. A satirical guide to why monolithic architecture is the right choice for 95% of applications.">
+    <meta name="keywords"
+        content="monolith, microservices, software architecture, over-engineering, monolithic architecture, distributed systems, software development, CRUD app, scalability, deployment">
+    <meta name="author" content="Just Fucking Use a Monolith">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="theme-color" content="#1a1a2e">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://justfuckinguseamonolith.com/">
+
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://justfuckinguseamonolith.com/">
+    <meta property="og:title" content="Just Fucking Use a Monolith | Stop Over-Engineering Your Architecture">
+    <meta property="og:description"
+        content="Stop over-engineering your architecture. You don't need microservices. You need a monolith. A satirical guide to why monolithic architecture is the right choice for 95% of applications.">
+    <meta property="og:image" content="https://justfuckinguseamonolith.com/og-image.png">
+    <meta property="og:site_name" content="Just Fucking Use a Monolith">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://justfuckinguseamonolith.com/">
+    <meta property="twitter:title" content="Just Fucking Use a Monolith | Stop Over-Engineering Your Architecture">
+    <meta property="twitter:description"
+        content="Stop over-engineering your architecture. You don't need microservices. You need a monolith. A satirical guide to why monolithic architecture is the right choice for 95% of applications.">
+    <meta property="twitter:image" content="https://justfuckinguseamonolith.com/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Just Fucking Use a Monolith",
+      "url": "https://justfuckinguseamonolith.com/",
+      "description": "Stop over-engineering your architecture. You don't need microservices. You need a monolith.",
+      "author": {
+        "@type": "Organization",
+        "name": "Just Fucking Use a Monolith"
+      },
+      "inLanguage": "en-US",
+      "about": {
+        "@type": "Thing",
+        "name": "Software Architecture",
+        "description": "A satirical guide advocating for monolithic architecture over microservices for most applications"
+      }
+    }
+    </script>
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,7 +105,6 @@
                     <li>Debugging doesn't require distributed tracing tools</li>
                     <li>Transactions actually work without distributed sagas</li>
                     <li>Refactoring is find-and-replace, not a 6-month migration</li>
-                    <li>You can run it on your laptop, you don't need a cluster</li>
                 </ul>
             </section>
 
@@ -81,7 +142,8 @@
             <section class="objection">
                 <h2>"But my startup is about to hit a million in ARR!"</h2>
                 <p>Do not build for the projected scale of your startup. That scale only exists in the fucking pitch
-                    deck you made at 2 AM. You're optimizing for 10 million users when you have 47. You're planning for Black
+                    deck you made at 2 AM. You're optimizing for 10 million users when you have 47. You're planning for
+                    Black
                     Friday traffic when you haven't made your first sale. You know what doesn't scale? Your engineering
                     team debugging distributed transactions at 3 AM because you prematurely optimized for problems you
                     don't have.</p>
